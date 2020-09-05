@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <h1>P2Play</h1>
-            <img src="svgs/logo-play.svg" alt="P2Play">
+            <!-- <img src="svgs/logo-play.svg" alt="P2Play"> -->
+            <span class="material-icons">play_arrow</span>
         </div>
         <div class="menu">
             <a href="#">INÍCIO</a>
@@ -24,8 +26,23 @@
             <p>Assista</p>
             <p>Canais, Filmes e Séries onde quiser.</p>
             <p>Sem travamentos.</p>
+            <a href="#" class="btn-saibamais">Saiba Mais</a>
         </div>
         <div class="shadow-y"></div>
     </section>
+    <section class="func-page">
+        <div class="func-title">
+            <span class="material-icons">settings</span>
+            <p>Funcionalidades</p>
+        </div>
+        <div class="container-funcs">
+            <div class="card-funcs">
+                <div class="card-icon"><span class="material-icons">4k</span></span></div>
+                <div class="card-title"><p>Conteúdos em 4K</p></div>
+                <div class="card-content"><p>Todos os conteúdos com opções de qualidade em <strong>4K, FullHD e SD</strong>.</p></div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
 </html>

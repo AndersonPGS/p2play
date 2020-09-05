@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,100;1,200;1,300;1,500&display=swap');
 
 * {
     margin: 0;
@@ -8,10 +8,12 @@
 
 body {
     background-color: #000;
+    color: white;
 }
 
-header {
+.header {
     position: fixed;
+    z-index: 10000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,15 +22,20 @@ header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.349), transparent);
     color: white;
 }
+.header.active {
+    background: linear-gradient(to right, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.384) 0%);
+
+}
 
 header .logo {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
-    height: 40px;
-    margin-left: 5px;
+header .logo span {
+    font-size: 60px;
+    margin-left: -10px;
+    color: #F44336;
 }
 
 header .menu a {
@@ -48,14 +55,13 @@ header .menu .btn-adquirir {
 
 .landing {
     height: 100vh;
-    background: url("images/background.jpg") no-repeat center center fixed;
-    background-position-x: 18rem;
-    background-position-y: -5rem;
+    background: url("images/bg.png") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
+    min-width: 100%;
 }
 
 .landing .shadow-y {
@@ -65,7 +71,7 @@ header .menu .btn-adquirir {
 
 .landing .landing-title {
     position: absolute;
-    padding: 10rem 2.0rem;
+    padding: 10rem 2.5rem;
     width: 550px;
 }
 
@@ -80,5 +86,66 @@ p:nth-child(2) {
 p:nth-child(3) {
     font-size: 2.7rem;
     font-weight: 500;
+    font-style: italic;
+}
+
+.landing .landing-title .btn-saibamais {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background-color: #F44336;
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.func-page .func-title{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.func-page .func-title span {
+    font-size: 4.0rem;
+    margin-right: 20px;
+}
+
+.func-page .func-title p {
+    font-size: 3.0rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.card-funcs {
+    padding: 20px 10px;
+    height: 400px;
+    width: 300px;
+    background: dimgray;
+}
+
+.card-funcs .card-icon span {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+    padding: 50px;
+}
+
+.card-funcs .card-title p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.card-funcs .card-content p {
+    font-size: 1.6rem;
+    font-weight: 300;
     font-style: italic;
 }
