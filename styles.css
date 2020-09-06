@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;0,900;1,100;1,200;1,300;1,500&display=swap');
 
+:root {
+    --white: #F7F7FF;
+    --red: #f53729;
+    --red-secundary: #F44336;
+}
 * {
     margin: 0;
     box-sizing: border-box;
@@ -8,8 +13,10 @@
 
 body {
     background-color: #000;
-    color: white;
+    color: var(--white);
 }
+
+/* PAGE LANDING */
 
 .header {
     position: fixed;
@@ -20,10 +27,10 @@ body {
     width: 100%;
     padding: 15px 2.0rem;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.349), transparent);
-    color: white;
+    color: var(--white);
 }
 .header.active {
-    background: linear-gradient(to right, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.384) 0%);
+    background: linear-gradient(to right, rgb(0, 0, 0) 35%, rgba(0, 0, 0, 0.74) 65%);
 
 }
 
@@ -35,19 +42,19 @@ header .logo {
 header .logo span {
     font-size: 60px;
     margin-left: -10px;
-    color: #F44336;
+    color: var(--red);
 }
 
 header .menu a {
     text-decoration: none;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     font-size: 1.4rem;
     margin: auto 10px;
 }
 
 header .menu .btn-adquirir {
-    background-color: #F44336;
+    background-color: var(--red);
     padding: 15px 25px;
     border-radius: 15px;
     font-weight: 700;
@@ -60,7 +67,7 @@ header .menu .btn-adquirir {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color: white;
+    color: var(--white);
     min-width: 100%;
 }
 
@@ -92,8 +99,8 @@ p:nth-child(3) {
 .landing .landing-title .btn-saibamais {
     position: absolute;
     text-decoration: none;
-    color: white;
-    background-color: #F44336;
+    color: var(--white);
+    background-color: var(--red);
     padding: 20px 40px;
     border-radius: 15px;
     font-size: 2.0rem;
@@ -103,12 +110,36 @@ p:nth-child(3) {
     margin: 50px 0px;
 }
 
-.func-page .func-title{
-    color: white;
+/* PAGE PAYMENT */
+
+.payment-page .payment-title{
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0px;
+    padding: 45px 0px;
+}
+
+.payment-page .payment-title span {
+    font-size: 4.0rem;
+    margin-right: 20px;
+}
+
+.payment-page .payment-title p {
+    font-size: 3.0rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+
+
+/* PAGE FUNCTIONS */
+.func-page .func-title{
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0px;
 }
 
 .func-page .func-title span {
@@ -122,30 +153,154 @@ p:nth-child(3) {
     font-weight: 100;
 }
 
+.container-funcs {
+    width: 100%;
+    padding: 0px 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .card-funcs {
-    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 20px;
     height: 400px;
     width: 300px;
-    background: dimgray;
+    background: #000;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.card-funcs:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+    -moz-box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+    box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+}
+
+
+.card-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--red);
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    top: -25px;
+    padding: 0px;
+    margin: 0px;
+    left: 41%;
+}
+
+.card-bar {
+    width: 92%;
+    height: 2px;
+    background: linear-gradient(to right, #000000d3, var(--red), #000000d3) ;
 }
 
 .card-funcs .card-icon span {
-    width: 100%;
-    font-size: 4rem;
-    text-align: center;
-    padding: 50px;
+    font-size: 2.5rem;
 }
 
 .card-funcs .card-title p {
-    width: 100%;
+    width: 300px;
+    padding: 30px 0px 25px;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 500;
     font-style: italic;
+    border-radius: 20px 20px 0px 0px;
+    background: #0c0c0cea;
+}
+
+.card-funcs .card-content {
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .card-funcs .card-content p {
     font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* PAGE SUPPORT */
+.contact-page .contact-title{
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0px;
+}
+
+.contact-page .contact-title span {
+    font-size: 4.0rem;
+    margin-right: 20px;
+}
+
+.contact-page .contact-title p {
+    font-size: 3.0rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.container-contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.container-contact .contact-text p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.container-contact .contact-text p strong {
+    /* color: #03c048; */
+    color: var(--red);
+}
+
+.container-contact .contact-text p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container-contact .btn-contact{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 15px;
+    font-weight: 600;
+    width: 25%;
+    padding: 25px 15px;
+}
+
+.container-contact .btn-contact img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+footer .footer-text {
+    opacity: 80%;
+    margin-top: 150px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 0.8rem;
     font-weight: 300;
     font-style: italic;
 }
