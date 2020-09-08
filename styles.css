@@ -131,6 +131,131 @@ p:nth-child(3) {
     font-weight: 100;
 }
 
+.payment-page .container-payment {
+    padding: 0px 4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.payment-page .container-payment .card-payment {
+    position: relative;
+}
+
+.card-payment {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 20px;
+    height: 550px;
+    width: 35%;
+    min-width: 350px;
+    max-width: 400px;
+    background: #000;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.card-payment:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+    -moz-box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+    box-shadow: -3px 3px 5px -3px #f53729, 3px 3px 5px -3px #f53729;
+}
+
+.card-payment .card-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--red);
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    top: -25px;
+    padding: 0px;
+    margin: 0px;
+    left: 44.5%;
+}
+
+.card-payment .card-bar {
+    width: 92%;
+    height: 2px;
+    background: linear-gradient(to right, #000000d3, var(--red), #000000d3) ;
+}
+
+.card-payment .card-icon span {
+    font-size: 2.5rem;
+}
+
+.card-payment .card-title {
+    width: 100%;
+}
+
+.card-payment .card-title p {
+    padding: 30px 0px 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    border-radius: 20px 20px 0px 0px;
+    background: #0c0c0cea;
+}
+
+.card-payment .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    padding: 7%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.card-payment .card-content p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.card-payment .card-content .description p:nth-child(2) {
+    font-size: 1rem;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.card-payment .card-content .price {
+    /* text-align: center; */
+    color: var(--red);
+    /* opacity: 50%; */
+}
+
+.card-payment .card-content .price #old-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.container-payment .card-payment .card-content .btn-test {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 15px;
+    font-weight: 600;
+    width: 100%;
+    padding: 25px 15px;
+}
+
+
+
+
 
 
 /* PAGE FUNCTIONS */
