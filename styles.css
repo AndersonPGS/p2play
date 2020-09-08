@@ -330,7 +330,7 @@ p:nth-child(3) {
     font-style: italic;
 }
 
-.card-payment .card-content .notification {
+.payment-page .card-payment .card-content .price-content .notification {
     font-size: 1rem;
     display: flex;
     /* padding-top: 60px; */
