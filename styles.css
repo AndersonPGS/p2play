@@ -331,14 +331,23 @@ p:nth-child(3) {
 }
 
 .payment-page .card-payment .card-content .price-content .notification {
-    font-size: 1rem;
     display: flex;
+    justify-content: center;
     /* padding-top: 60px; */
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.payment-page .card-payment .card-content .price-content .notification span {
+    margin-right: 5px;
+}
+
+.payment-page .card-payment .card-content .price-content .notification p{
+    font-size: 1rem;
 }
 
 .card-payment .card-content .price {
     /* text-align: center; */
+    font-weight: 700;
     color: var(--red);
     /* opacity: 50%; */
 }
